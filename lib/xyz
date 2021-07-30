@@ -1,0 +1,54 @@
+class Greetings extends StatefulWidget {
+  const Greetings({ Key? key }) : super(key: key);
+
+  @override
+  _GreetingsState createState() => _GreetingsState();
+}
+
+class _GreetingsState extends State<Greetings> {
+  @override
+  Widget build(BuildContext context) {
+     double width=MediaQuery.of(context).size.width;
+    double height=MediaQuery.of(context).size.height;
+
+    return Scaffold(
+      body: Container(
+         width:width,
+         height: height,
+
+        child:SingleChildScrollView(
+          child:Column(
+            mainAxisAlignment:MainAxisAlignment.start,
+          
+            children:[
+              Padding(padding: const EdgeInsets.all(20.0),),
+              SizedBox(height: 50.0,),
+              FittedBox(alignment:Alignment.center
+
+              ),
+              
+            Text('CRUX FLUTTER SUMMER GROUP',style: TextStyle(fontSize: 40.0,fontWeight:FontWeight.bold,color:Color(0xff2FC4B2))),
+            SizedBox(height: 60.0),
+            Center(
+              child:FittedBox(
+                child:
+            Text('Welcomes you',style: TextStyle(fontSize: 20.0,fontWeight:FontWeight.bold,color:Colors.black ),),),),
+            SizedBox( height: 30.0,),
+            Text('Have a great journey ahead!!',style: TextStyle(fontSize: 20.0,fontWeight:FontWeight.bold,color:Colors.black ),),
+            ]
+          ))));
+     
+      
+    
+  }
+}
+GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Greetings()));
+                },
+              ),
+ GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Greetings()));
+                },
+              ),              
